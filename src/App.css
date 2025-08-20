@@ -19,7 +19,7 @@ html {
 
 body {
   font-family: "Markazi Text", Helvetica, Arial, sans-serif;
-  background-image: url('/bg-food.png');
+  background: #333 url('/bg-food.webp');
   /* ضع رابط الصورة هنا */
   background-size: cover;
   /* تغطية كاملة للشاشة */
@@ -31,7 +31,7 @@ body {
   /* توسيط الصورة */
   margin: 0;
   /* إزالة الفراغات الافتراضية */
-  min-height: 100vh;
+  min-height: 100svh;
   /* ضمان أن الطول يغطي الشاشة */
 }
 
