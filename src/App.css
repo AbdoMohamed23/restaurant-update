@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #D62828;
+  --color-primary-light: #F8F9FA;
+
+  --color-secondary: #2A9D8F;
+  --color-secondary-light: #F8F9FA;
+
+  --color-neutral-dark: #000;
+  --color-neutral-light: #F8F9FA;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Markazi Text", Helvetica, Arial, sans-serif;
+  background-image: url('../src/assets/bg-food\(3\).jpeg_upscayl_4x_ultramix-balanced-4x.png'); /* ضع رابط الصورة هنا */
+  background-size: cover;                 /* تغطية كاملة للشاشة */
+  background-repeat: no-repeat;          /* بدون تكرار */
+  background-attachment: fixed;          /* الصورة ثابتة عند السكرول */
+  background-position: center center;    /* توسيط الصورة */
+  margin: 0;                              /* إزالة الفراغات الافتراضية */
+  min-height: 100vh;                      /* ضمان أن الطول يغطي الشاشة */
+}
+
+/* الحالة العادية */
+#header {
+  transition: transform 0.3s ease;
+}
+
+/* يخفي الهيدر */
+#header.hide {
+  transform: translateY(-100%);
+}
+
+.container {
+  max-width: 1200px;
+  padding: 20px; /* إضافة حشوة داخلية */
+}
+
+.scroll-wrapper {
+  display: flex;
+  width: 200%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}
+
+.text-stroke-3 {
+  -webkit-text-stroke: 2px #ffffff;
+}
+
+.animation-scrolling-text {
+  animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* 
+.fade-in-right {
+  opacity: 0;
+  overflow: hidden;
+  animation: fadeInRight 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+} */
